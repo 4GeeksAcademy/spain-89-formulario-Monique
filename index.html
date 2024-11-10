@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="containe m-5 mt-4 mb-3">
+        <div class="card"><!--utilizando modelo de card de boostrap-->
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" style="background: rgb(245, 241, 241);"><h4>Payment form example</h4> </li>
+                <li class="list-group-item">
+                    <div class="alert alert-danger" style="font-weight: 600;  padding: 7px;" role="alert">
+                        <h6 style="margin-left: 10px; margin-top: 3px;">Some fields are missing</h6>
+                    </div>
+        
+                    <form class="row g-4">
+                        <div class="col-md-5 ">
+                            <label for="inputCard" class="form-label" style="font-weight:600">Card #</label>
+                            <input type="Card" class="form-control" id="inputCard" placeholder="XXXXXXXXXXXXXXXX">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="inputCVC" class="form-label" style="font-weight: 600">CVC #</label>
+                            <input type="CVC" class="form-control" id="inputCVC" placeholder="0000">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputAmount" class="form-label" style="font-weight: 600; position: relative;">Amount</label>
+                            <div><i class="fa-solid fa-dollar-sign" style="position: absolute; top: 20%; left: 66.7%; font-size: 15px;"></i></div>                  
+                            <input type="Amount" class="form-control" id="inputAmount" placeholder="Amount">
+                        </div>
+                        <div class="col-6">
+                            <label for="inputFistName" class="form-label" style="font-weight: 600">First Name</label>
+                            <input type="text" class="form-control" id="inputFistName">
+                        </div>
+                        <div class="col-6">
+                            <label for="inputLastName" class="form-label" style="font-weight: 600">Last Name</label>
+                            <input type="text" class="form-control" id="inputLastName">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label" style="font-weight: 600">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="inputState" class="form-label" style="font-weight: 600; position: relative;">State</label>
+                            <!-- poniendo el selector transparente y agregando iconos en su lugar-->
+                            <select class="form-select" style="background: transparent;">
+                                <option selected>Pick a State</option>
+                            </select>
+                            <!--agragando iconos de flecha arriba y abajo-->
+                             <i class="fa-solid fa-sort-up" style="position: absolute; top:56.5%; left:72%; font-size: 13px;"></i>
+                            <i class="fa-solid fa-sort-down" style="position: absolute; top:56.5%; left:72%; font-size: 13px;"></i>    
+                        </div>
+                    
+                        <div class="col-md-3">
+                            <label for="inputPostalCode" class="form-label" style="font-weight: 600">Postal Code</label>
+                            <input type="text" class="form-control" id="inputPostalCode">
+                        </div>
+                        <div class="col-6">
+                            <label class="form-check-label mb-3" style="font-weight:600" for="gridCheck">We accept:</label>
+                    
+                            <div class="col-4 text-light h-25 d-flex align-items-center rounded" style="background: gray;">
+                         
+                                <div class="form-check form-check-inline m-1 p-2">
+                                    <input class="form-check-sm-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-mastercard fa-sm"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline m-1 p-2">
+                                    <input class="form-check-sm-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-visa fa-sm"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline m-1 p-2">
+                                    <input class="form-check-sm-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                    <label class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-diners-club fa-sm"></i></label>
+                                </div>  
+                                <div class="form-check form-check-inline m-0 p-2">
+                                    <input class="form-check-sm-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                                    <label class="form-check-label" for="inlineRadio3"> <i class="fa-brands fa-cc-discover fa-sm"></i></label>
+                                </div>  
+                            </div>
+                        </div>
+                        <!--caja de message con la frase abajo de caja con texto en color gray-->
+                        <div class="col-6 mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label" style="font-weight: 600">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <p style="color: gray;">Add any notes here.</p>
+                        </div>
+                    </form>
+                </li>
+                        <div><!--footer con dos botones-->
+                            <li class="list-group-item" style="background: rgb(245, 241, 241);">
+                                <div class="col-12 d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-secondary me-2">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Send</button>
+                                </div>
+                            </li>
+                        </div>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
